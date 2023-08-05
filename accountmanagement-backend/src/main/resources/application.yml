@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: account-management
+  profiles:
+    active: prod
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  mail:
+    default-encoding: utf-8
+    host: smtp.qq.com
+    port: 465
+    username: xxxx
+    password: xxxx
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
